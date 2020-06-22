@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Coves;
+}
+
+body,html{
+    height: 100vh;
+    width: 100vw;
+}
+
+a{
+text-decoration: none;
+
+}
+#background{
+    height: 100%; 
+    width: 100%; 
+    animation : bg-change 10s infinite ease-in-out;
+    background-position: center center;
+
+    z-index: -2;
+    filter : blur(4px);
+    color:white;
+}
+
+#box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:white;
+    border : 2px solid white;
+    width: 13rem;
+    height:13rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.75rem;
+    background: rgb(0, 0, 0);
+    line-height: 5rem;
+    z-index:0;
+    opacity: 1;
+}
+
+#box button{
+    height: 2.5rem;
+    width: 7rem;
+    font-size: 1rem;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    transition:all ease-in-out 0.2s ;
+}
+
+#box button:hover{
+    transform: scale(1.1);
+    animation : bg-change 1s infinite ease-in-out;
+}
+
+
+@keyframes bg-change{
+ 0%{
+     background-color: tomato;
+ }
+ 25%{
+     background-color: goldenrod;
+ }
+ 50%{
+     background-color: rgb(46,190,45);
+ }
+ 75%{
+     background-color: royalblue;
+ }
+100%{
+     background-color: tomato;
+ }
+
+
+}
